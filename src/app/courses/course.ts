@@ -8,4 +8,5 @@ export class Course {
   price: number = 0;
   code: string = "";
   releaseDate: string = "";
+  description: string = "";
 }
