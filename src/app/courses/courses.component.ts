@@ -28,7 +28,7 @@ export class CoursesComponent implements OnInit {
   set filter (value: string){
     this._filterBy = value
 
-    this.filteredCourse = this._courses.filter((c: Course) => c.name.toLowerCase().indexOf(this._filterBy.toLowerCase()) > -1)
+    this.filteredCourse = this._courses.filter((c: Course) =>c.price.toString().indexOf(this._filterBy) > -1 || c.name.toLowerCase().indexOf(this._filterBy.toLowerCase()) > -1)
   }
 
   get filter (){
