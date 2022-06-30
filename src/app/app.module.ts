@@ -1,3 +1,4 @@
+import { CourseInfoComponet } from './courses/course.id.componet';
 import { ReplacePipe } from './pipe/replace.pipe';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -23,10 +24,13 @@ import { Error404Componet } from './error-404/error404.component';
     FormsModule,
     RouterModule.forRoot([
       {
+        path: "courses", component: CoursesComponent
+      },
+      {
+        path:"courses/info/:id", component: CourseInfoComponet
+      },
+      {
         path: "", redirectTo: "courses", pathMatch: "full"
-    },
-    {
-      path: "courses", component: CoursesComponent
     },
     {
       path: '**', component: Error404Componet
